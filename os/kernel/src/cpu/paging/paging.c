@@ -42,7 +42,7 @@ void paging_set_page_directory(void *address)
     uint32_t pdindex = (uint32_t)address >> 22;
     uint32_t ptindex = (uint32_t)address >> 12 & 0x03FF;
 
-    uint32_t *pt = (*((uint32_t*)KERNEL_PAGE_DIRECTORY_ADDRESS + pdindex) & ~0xFFF) + 0xC0000000;
+    uint32_t *pt = (uint32_t*)((*((uint32_t*)KERNEL_PAGE_DIRECTORY_ADDRESS + pdindex) & ~0xFFF) + 0xC0000000);
 
     uint32_t paddr =((pt[ptindex] & ~0xFFF) + ((uint32_t)address & 0xFFF));
 

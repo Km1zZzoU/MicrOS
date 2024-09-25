@@ -328,8 +328,8 @@ void clear_bss()
 void turn_on_serial_debugging()
 {
     serial_init(COM1_PORT, 1200, 8, 1, PARITY_NONE);
-    set_debug_traps();
-    breakpoint();
+    //set_debug_traps();
+    //breakpoint();
 }
 
 void v8086_BIOS_timer_interrupt()
