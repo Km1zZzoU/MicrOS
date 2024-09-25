@@ -6,6 +6,7 @@
 #include "stdbool.h"
 #include "stdint.h"
 #include "../../../memory/heap/heap.h"
+#include "../kernel_stdio.h"
 
 #define FLAGS_ZEROPAD (1U << 0U)
 #define FLAGS_LEFT (1U << 1U)
