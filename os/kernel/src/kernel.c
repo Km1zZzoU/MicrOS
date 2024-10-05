@@ -334,6 +334,12 @@ void clear_bss()
     void *bss_end_addr = &BSS_SECTION_END;
     uint32_t bss_length = bss_end_addr - bss_start_addr;
 
+    extern uint32_t RODATA_BEGIN;
+    extern uint32_t DATA_BEGIN;
+
+    uint32_t rodata_len = &DATA_BEGIN - &RODATA_BEGIN;
+    uint32_t data_len = &BSS_SECTION_START - &DATA_BEGIN;
+
     memset(bss_start_addr, 0, bss_length);
 }
 

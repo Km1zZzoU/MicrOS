@@ -15,7 +15,7 @@
 v8086* machine = NULL;
 bool initialized = false;
 int currentBank = -1;
-uint8_t* mem_buff = (uint8_t*)0xc0000000 + 0xA0000;
+uint8_t* mem_buff = (uint8_t*)(0xc0000000 + 0xA0000);
 uint8_t *linear_buffer = 0;
 uint32_t linear_buff_size;
 uint32_t page_index = 0;

@@ -7,7 +7,7 @@ void micros_gdi_set_video_mode(uint16_t mode)
 
 int8_t micros_gdi_find_video_mode(video_mode_descriptor* vmd)
 {
-    return micros_interrupt_1a(0x010D, vmd);
+    return micros_interrupt_1a(0x010D, (uint32_t)vmd);
 }
 
 bool micros_generic_vga_is_text_mode()

@@ -21,21 +21,25 @@ SECTIONS
 		*(.text)
 	}
 
+
 	.rodata ALIGN(4K) : AT(ADDR(.rodata) - KERNEL_VIRTUAL_ADDRESS)
 	{
+		RODATA_BEGIN = .;
 		*(.rodata)
 	}
 
+
 	.data ALIGN(4K) : AT(ADDR(.data) - KERNEL_VIRTUAL_ADDRESS)
 	{
+		DATA_BEGIN = .;
 		*(.data)
 	}
 
-	BSS_SECTION_START = .;
-
 	.bss ALIGN(4K) : AT(ADDR(.bss) - KERNEL_VIRTUAL_ADDRESS)
 	{
+		BSS_SECTION_START = .;
 		*(.bss)
+		*(COMMON)
 	}
 
 	BSS_SECTION_END = .;

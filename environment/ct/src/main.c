@@ -1,6 +1,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <micros.h>
+#include <stdio.h>
 
 int main(void)
 {

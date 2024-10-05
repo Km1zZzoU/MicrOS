@@ -1,5 +1,6 @@
 #include "videocard_calls.h"
 #include "../../../drivers/dal/videocard/videocard.h"
+#include "../../../drivers/vga/genericvga.h"
 
 void syscall_videocard_find_video_mode(interrupt_state* state)
 {
